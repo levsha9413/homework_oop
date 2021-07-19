@@ -1,4 +1,11 @@
-'''Дописать тест что класс триугольник унаследован от класса фигур '''
+import pytest
+from src.figure import Figure
 
-def is_figure(triangle):
-    assert issubclass(Triangle, Figure)
+''' Запретить создавать экземпляры базового класса Figure'''
+'''
+def test_figure_created():
+    with pytest.raises(Exception):
+        Figure(1)
+'''
+def test_a():
+    print(Figure())
