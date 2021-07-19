@@ -1,8 +1,8 @@
-import figure
+from src.figure import Figure
 from math import sqrt
 
 
-class Triangle(figure.Figure):
+class Triangle(Figure):
     _name = "Triangle"
 
     def __new__(cls, line1, line2, line3):
@@ -25,3 +25,6 @@ class Triangle(figure.Figure):
     @property
     def perimeter(self):
         return self.line3_length + self.line2_length + self.line1_length
+
+
+f = Triangle(3, 3, 3)

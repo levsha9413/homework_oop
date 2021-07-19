@@ -1,7 +1,7 @@
-import figure
+from src.figure import Figure
 
 
-class Rectangle(figure.Figure):
+class Rectangle(Figure):
     _name = "Rectangle"
 
     def __new__(cls, line1, line2):

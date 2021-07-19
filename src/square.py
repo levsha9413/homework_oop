@@ -1,7 +1,7 @@
-import figure
+from src.figure import Figure
 
 
-class Square(figure.Figure):
+class Square(Figure):
     _name = "Square"
 
     def __new__(cls, line1):

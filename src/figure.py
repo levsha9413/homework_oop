@@ -4,9 +4,6 @@ from math import sqrt, pi
 class Figure:
     _name = None
 
-    def __new__(cls):
-        raise Exception("Нельзя создавать экземплры класса Figure")
-
     def __init__(self, line_lenght):
         self.line1_length = line_lenght
 
@@ -26,5 +23,3 @@ class Figure:
     @property
     def name(self):
         return self._name
-
-f = Figure()

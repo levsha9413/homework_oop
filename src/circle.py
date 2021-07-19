@@ -1,8 +1,8 @@
-import figure
 from math import pi
+from src.figure import Figure
 
 
-class Circle(figure.Figure):
+class Circle(Figure):
     _name = "Circle"
 
     def __new__(cls, radius):

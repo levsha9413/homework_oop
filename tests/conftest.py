@@ -3,6 +3,7 @@ import src.triangle
 import src.square
 import src.circle
 import src.rectangle
+import src.figure
 
 
 # Создать дефолтные фигуры для операций
@@ -13,12 +14,8 @@ import src.rectangle
 def default_triangle(request):
     def_triangle = src.triangle.Triangle(3, 3, 3)
 
-    def final():
-        del def_triangle
-
-    request.addfinalizer(final)
-
-    return def_triangle
+    yield def_triangle
+    del def_triangle
 
 
 # Rectangle
@@ -26,12 +23,8 @@ def default_triangle(request):
 def default_rectangle(request):
     def_rectangle = src.rectangle.Rectangle(3, 3)
 
-    def final():
-        del def_rectangle
-
-    request.addfinalizer(final)
-
-    return def_rectangle
+    yield def_rectangle
+    del def_rectangle
 
 
 # Square
@@ -39,12 +32,8 @@ def default_rectangle(request):
 def default_square(request):
     def_square = src.square.Square(3)
 
-    def final():
-        del def_square
-
-    request.addfinalizer(final)
-
-    return def_square
+    yield def_square
+    del def_square
 
 
 # Circle
@@ -52,9 +41,5 @@ def default_square(request):
 def default_circle(request):
     def_circle = src.circle.Circle(3)
 
-    def final():
-        del def_circle
-
-    request.addfinalizer(final)
-
-    return def_circle
+    yield def_circle
+    del def_circle
