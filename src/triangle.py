@@ -25,6 +25,3 @@ class Triangle(Figure):
     @property
     def perimeter(self):
         return self.line3_length + self.line2_length + self.line1_length
-
-
-f = Triangle(3, 3, 3)
